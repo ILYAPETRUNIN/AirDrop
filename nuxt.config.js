@@ -26,7 +26,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~core'
+    '~core',
+    '@plugins/v-mask.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -66,13 +67,17 @@ export default {
           primary: 'E40ECF',
           accent: '21FDA1',
           secondary: '21D4FD',
+          third:'#044857',
           info: colors.teal.lighten1,
           warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
+          error: '#E40E5B',
           success: colors.green.accent3
         }
       }
-    }
+    },
+    icons: {
+      iconfont: 'mdi', // default - only for display purposes
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
