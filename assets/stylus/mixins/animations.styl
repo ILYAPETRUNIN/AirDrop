@@ -1,0 +1,17 @@
+hoverColor($type,$baseColor,$color,$delay){
+    if ($type=='text'){
+        color:$baseColor
+        transition:color $delay
+        &:hover{
+            color:$color
+        }
+    }
+
+    else if ($type=='icon'){
+        fill:$baseColor
+        transition:fill $delay
+        &:hover{
+            fill:$color
+        }
+    }
+}

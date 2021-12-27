@@ -1,15 +1,15 @@
 <template>
     <div>
         <div class='my-container'>
-            <ButtonUI :style='{marginRight:"10px"}' fill gradient label='Actual Airdrops'/>
-            <ButtonUI :style='{marginRight:"10px"}' fill label='Actual Airdrops'/>
-            <ButtonUI :style='{marginRight:"10px"}' fill label='Actual Airdrops'>
+            <ButtonUI  fill gradient label='Actual Airdrops'/>
+            <ButtonUI  fill label='Actual Airdrops'/>
+            <ButtonUI  fill label='Actual Airdrops'>
                 <template v-slot:suffix>
                     <svg fill='red' height="10" width="16"><use xlink:href="~assets/icons.svg#arrow-right"></use></svg>
                 </template>
             </ButtonUI>   
-            <ButtonUI :style='{marginRight:"10px"}' outline label='Actual Airdrops'/>
-            <ButtonUI :style='{marginRight:"10px"}' gradient outline label='Actual Airdrops'/>
+            <ButtonUI  outline label='Actual Airdrops'/>
+            <ButtonUI  gradient outline label='Actual Airdrops'/>
             <ButtonUI disabled label='Actual Airdrops'/>  
         </div>
 
@@ -21,6 +21,7 @@
                     <svg height="24" width="24"><use xlink:href="~assets/icons.svg#pen"></use></svg>
                 </template>
             </TextFieldUI>    
+            <TextFieldUI v-model='nameField' placeholder='Nickname' fill  label='Google'/>
         </div>
     </div>
 </template>
@@ -36,7 +37,8 @@ export default {
     data(){
         return{
             numberField:null,
-            passwordField:null
+            passwordField:null,
+            nameField:""
         }
     }
 }
@@ -51,5 +53,6 @@ export default {
         flexy(row,center,center,nowrap)
         +breakpoint(md-and-down){
             flex-wrap: wrap
+            padding 10px
         }
 </style>

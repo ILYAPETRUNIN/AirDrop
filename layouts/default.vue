@@ -1,6 +1,6 @@
 <template>
   <v-app dark class='app'>
-    <Header/>
+    <mainHeader/>
     
     <v-main>
         <Nuxt />
@@ -10,11 +10,11 @@
 </template>
 
 <script>
-import Header from '@/components/mainLayout/header.vue'
+import mainHeader from '@/components/mainLayout/MainHeader.vue'
 
 export default {
   components:{
-    Header
+    mainHeader
   },
   data () {
     return {

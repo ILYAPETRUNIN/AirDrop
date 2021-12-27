@@ -68,6 +68,7 @@ export default {
           accent: '21FDA1',
           secondary: '21D4FD',
           third:'#044857',
+          four:'#AEAEAE',
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: '#E40E5B',

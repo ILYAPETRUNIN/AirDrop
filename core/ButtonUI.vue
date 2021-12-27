@@ -40,8 +40,6 @@ export default {
         svg
             margin-left:10px
     
-
-
     .fill
         background:$dark.secondary
         &_gradient

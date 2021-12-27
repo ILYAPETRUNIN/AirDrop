@@ -1,8 +1,8 @@
 <template>
     <TextFieldUI  v-model="inputVal" :type='(showPass) ? "text" : "password"' v-bind="$props" >
         <template v-slot:append>
-            <v-icon :color='(!isError) ? "secondary" : "error"' @click='showPass=false' v-if='showPass'>mdi-eye</v-icon>
-            <v-icon :color='(!isError) ? "secondary" : "error"' @click='showPass=true' v-else>mdi-eye-off</v-icon>
+            <v-icon  @click='showPass=false' v-if='showPass'>mdi-eye</v-icon>
+            <v-icon  @click='showPass=true' v-else>mdi-eye-off</v-icon>
         </template>
     </TextFieldUI>  
 </template>
