@@ -1,0 +1,12 @@
+@import '../mixins/flex.styl'
+container($type){
+    if($type=='lg'){
+        max-width:1200px;
+    }
+}
+
+.container{
+    &__lg{
+       container(lg);  
+    }   
+}
