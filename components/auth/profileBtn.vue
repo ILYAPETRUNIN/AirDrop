@@ -1,5 +1,5 @@
 <template>
-    <v-menu class='main-langSelect' offset-y>
+    <v-menu offset-y>
         <template v-slot:activator="{ on, attrs }">
                 <v-btn icon>
                     <div class='profileBtn'>
@@ -9,7 +9,6 @@
                     </div>
                 </v-btn>
         </template>
-
     </v-menu>
 </template>
 

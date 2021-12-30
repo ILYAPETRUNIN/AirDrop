@@ -36,8 +36,9 @@ export default {
         position:fixed
         &__menu
             width:calcPercentWidth(800)
+            +breakpoint(md-and-down){display:none}
         &__info
             width 218px
             flexy(row,space-between,center,nowrap)
-
+            +breakpoint(md-and-down){display:none}          
 </style>
