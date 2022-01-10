@@ -1,13 +1,20 @@
 <template>
     <header class='main-header'>
         <logo/>
-        <mainMenu class='main-header__menu'/>
+        <main-menu class='main-header__menu'/>
 
-        <div class='main-header__info'>
-            <mainMessengers/>
-            <mainLangSelect/>
-            <profileBtn/>
+        <div class='main-header__desctop'>
+            <main-messengers/>
+            <main-lang-select/>
+            <profile-btn/>
         </div>
+
+        <div class='main-header__mobile'>
+            <main-lang-select/>
+            <main-mobile-menu/>
+        </div>
+
+
     </header>
 </template>
 
@@ -17,10 +24,11 @@ import mainMenu from './MainMenu.vue'
 import mainMessengers from './MainMessengers.vue'
 import mainLangSelect from './MainLangSelect.vue'
 import profileBtn from '../auth/profileBtn.vue'
+import mainMobileMenu from './MainMobileMenu'
 
 export default {
     components:{
-        logo,mainMenu,mainMessengers,mainLangSelect,profileBtn
+        logo,mainMenu,mainMessengers,mainLangSelect,profileBtn,mainMobileMenu 
     }
 }
 </script>
@@ -37,8 +45,11 @@ export default {
         &__menu
             width:calcPercentWidth(800)
             +breakpoint(md-and-down){display:none}
-        &__info
+        &__desctop
             width 218px
             flexy(row,space-between,center,nowrap)
-            +breakpoint(md-and-down){display:none}          
+            +breakpoint(md-and-down){display:none}
+        &__mobile
+            +breakpoint(lg-and-up){display:none}
+            
 </style>

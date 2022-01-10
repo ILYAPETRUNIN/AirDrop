@@ -13,6 +13,7 @@
 import mainHeader from '@/components/mainLayout/MainHeader.vue'
 
 export default {
+  layout: '',
   components:{
     mainHeader
   },

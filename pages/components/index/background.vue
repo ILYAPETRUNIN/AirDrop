@@ -60,6 +60,7 @@ export default {
         top:0px
         height:100%
         z-index:9
+
     }
     &__2
         position: absolute;
@@ -75,6 +76,11 @@ export default {
         +breakpoint(lg-and-down){
             right:-200px
         }
+        +breakpoint(md-and-down){
+            right:-250px
+            height:65%
+        }
+
     &__5
         position: absolute;
         bottom:0px;
