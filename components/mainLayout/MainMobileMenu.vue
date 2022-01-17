@@ -13,7 +13,7 @@
       </template>
       <div class='mobile-menu'>
         <main-menu mobile/>
-        <main-messengers/>
+        <main-messengers mobile circle/>
         <v-btn class='mobile-menu__closeBtn' @click='display=false' dark icon plain>
           <svg class='main-menu-btn' height="40" width="40">
             <use :xlink:href="require('@/assets/icons.svg')+'#menu.close'"></use>
@@ -44,8 +44,8 @@ export default {
 <style lang="stylus" scoped>
   @require '~@/assets/stylus/index.styl';
   .mobile-menu
-    width:100vw
-    height:100vh
+    width:100%
+    height:100%
     background: linear-gradient(180deg, rgba($dark.third,1) 0%, rgba($dark.primary, 0.8) 100%);
     border: 2px solid #257B8E;
     box-sizing: border-box;

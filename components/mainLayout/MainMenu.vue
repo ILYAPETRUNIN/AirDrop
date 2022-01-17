@@ -39,7 +39,11 @@ export default {
 
     .mobile
         flexy(column,center,center,nowrap)
-        setFont('adineuePROCyr',normal,normal,30px)
+        setFont('adineuePROCyr',bold,normal,35px)
+        .menu
+            &__link
+                hoverColor('text',white,$dark.secondary,0.5s)
+                margin-bottom:10px
 
             
 </style>

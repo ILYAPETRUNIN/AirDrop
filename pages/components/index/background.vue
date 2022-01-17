@@ -46,6 +46,8 @@ export default {
     img
         pointer-events: none; 
     &__slot
+        height:100%
+        width:100%
         z-index:11
         position:absolute
     &__3

@@ -34,8 +34,9 @@ export default {
  @require '~@/assets/stylus/index.styl';
 .main
     .home
-        height:100vh
-        width:100vw
+        height:100%
+        width:100%
+        +breakpoint(xs-only){padding-bottom:50px};
         flexy(row,center,flex-end,nowrap);
         &__content
             +breakpoint(xs-only){
