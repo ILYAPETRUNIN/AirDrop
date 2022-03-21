@@ -37,11 +37,16 @@ export default {
 
 <style lang="stylus" scoped>
  @require '~@/assets/stylus/index.styl';
+ @keyframes moving {
+    50% {transform: scaleX(5)}
+    100% {transform: scaleX(1)}
+}
+
 .bg
-    height:100%
-    width:100%
+    height:100vh
+    width:100vw
     overflow:hidden
-    position:absolute
+    position:relative
     
     img
         pointer-events: none; 
@@ -62,7 +67,7 @@ export default {
         top:0px
         height:100%
         z-index:9
-
+        animation: moving 6s infinite linear;
     }
     &__2
         position: absolute;
@@ -70,6 +75,7 @@ export default {
         top:0px
         height:100%
         z-index:9
+        animation: moving 6s infinite linear;
     &__4
         position: absolute;
         bottom:0px;

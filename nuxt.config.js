@@ -74,7 +74,9 @@ export default {
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: '#E40E5B',
-          success: colors.green.accent3
+          success: colors.green.accent3,
+          bg1:'#0A0914'
+          
         }
       }
     },

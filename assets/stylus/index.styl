@@ -12,7 +12,28 @@ useFont($font2)
   opacity: 0;
 }
 
-.app 
+
+.app
+    .gradient-text
+      gradienLinear('text',$dark.secondary 21.26%,$dark.primary 66.55%,262.17deg)
+      &_horizontal
+        gradienLinear('text',$dark.secondary 21.26%,$dark.primary 66.55%,265.34deg)
+        display: table;
+    .gradient-frame
+      flexy(row,center,center,nowrap)
+      position relative
+      z-index 0
+      &::after
+        content:''
+        position:absolute
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        gradienLinear('block',#21D4FD -9.98%,#E40ECF 62.2%,262.17deg)
+        filter: blur(30px);
+        opacity:0.8
+        z-index -1
     setFont('LabGrotesque',normal,normal)
     a{
         text-decoration none
