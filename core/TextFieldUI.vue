@@ -1,7 +1,7 @@
 <template>
     <div  class='textField' :class='{textField_active:(inputVal!="" && fill),textField_fill:fill,textField_outlined:outlined,textField_error:isError}'>
-        <label class='textField__label' for="input">{{label}}</label>
-        <v-text-field @update:error='(e)=>{isError=e}' :type="type" :rules="getRules" v-model='inputVal' v-mask="mask"  id='input'  class='textField__input' color='secondary' :label="placeholder" single-line outlined>
+        <label v-if='!solo' class='textField__label' for="input">{{label}}</label>
+        <v-text-field :solo='solo' @update:error='(e)=>{isError=e}' :type="type" :rules="getRules" v-model='inputVal' v-mask="mask"  id='input'  class='textField__input' color='secondary' :label="placeholder" single-line outlined>
             <template v-slot:append>
                 <div class='marker' @click="toggleMarker">
                     <slot name='append'></slot>
@@ -45,7 +45,8 @@ export default {
         value:{default:null},
         rules:{type:Array,default:()=>{return []}},
         mask:{type:String,default:''},
-        type:{type:String,default:'text'}
+        type:{type:String,default:'text'},
+        solo:{type:Boolean,default:false}
     },
 
     methods:{
@@ -105,9 +106,9 @@ export default {
 
         &__label
             font-size: 15px;
+            margin-bottom:5px
 
         &__input
-            margin-top:5px
             border-radius: 8px;
             font-size: 16px;
             setFont('adineuePROCyr',bold,normal)

@@ -42,10 +42,47 @@
         <div class='section2'>
             <v-container class='container__lg'>
                 <v-row>
-                    <v-col sm='12' md='6' v-for='(card,index) in cards' :key='index'>
+                    <v-col class='d-flex justify-center' cols='12' md='6' v-for='(card,index) in cards' :key='index'>
                         <card-UI :options='{gradient:true,glow:true}' v-bind='card'/>
                     </v-col>
                 </v-row>
+            </v-container>
+        </div>
+
+        <div class='separator'></div>
+
+        <div class='section3'>
+            <v-container class='container__lg'>
+                <h3 class='section3__header'>Completed Bounty Hunt & Airdrops</h3>
+                <v-row>
+                    <v-col class='d-flex justify-center' cols='12' md='6'  lg='4' v-for='(card,index) in cardSmall' :key='index'>
+                        <card-UI size='small' v-bind='card'/>
+                    </v-col>
+                </v-row>
+                <v-row class='section3__btn d-flex justify-center'>
+                    <v-col cols='11' md='3' >
+                        <ButtonUI  outline label='Load more'/>
+                    </v-col>
+                </v-row>
+            </v-container>
+    
+        </div>
+
+        <div class='section4'>
+            <v-container>
+                <v-row class='section4__header gradient-text_horizontal'>Subscribe to us and stay tuned!</v-row>
+                    <v-form class='section4__form gradient-block_blue'>
+                        <v-row>
+                            <v-col md='9'  cols='12'><TextFieldUI solo :rules='["required"]' outlined  placeholder='Enter your e-mail'/></v-col>
+                            <v-col md='3' cols='12'>
+                                <ButtonUI  fill label='Send information'>
+                                    <template v-slot:suffix>
+                                        <svg fill='red' height="10" width="16"><use xlink:href="~assets/icons.svg#arrow-right"></use></svg>
+                                    </template>
+                                </ButtonUI> 
+                            </v-col>
+                        </v-row>
+                    </v-form>
             </v-container>
         </div>
  </div>
@@ -68,10 +105,59 @@ const cards=[
     }
 ]
 
+const cardSmall=[
+    {
+        name:'Completed Airdrop titile',
+        img:require("@/assets/img/Card/Card1.png"),
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+    },
+    {
+        name:'Completed Airdrop titile',
+        img:require("@/assets/img/Card/Card1.png"),
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+    },
+    {
+        name:'Completed Airdrop titile',
+        img:require("@/assets/img/Card/Card1.png"),
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+    },
+        {
+        name:'Completed Airdrop titile',
+        img:require("@/assets/img/Card/Card1.png"),
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+    },
+    {
+        name:'Completed Airdrop titile',
+        img:require("@/assets/img/Card/Card1.png"),
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+    },
+    {
+        name:'Completed Airdrop titile',
+        img:require("@/assets/img/Card/Card1.png"),
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+    },
+        {
+        name:'Completed Airdrop titile',
+        img:require("@/assets/img/Card/Card1.png"),
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+    },
+    {
+        name:'Completed Airdrop titile',
+        img:require("@/assets/img/Card/Card1.png"),
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+    },
+    {
+        name:'Completed Airdrop titile',
+        img:require("@/assets/img/Card/Card1.png"),
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+    },
+
+]
+
 export default {
     components:{AnimateWrapper,ButtonScroll},
     data(){
-        return{cards}
+        return{cards,cardSmall}
     }
 }
 </script>
@@ -95,8 +181,6 @@ export default {
             setFont('adineuePROCyr',bold,normal,79px,75px)
             max-width:456px
             +breakpoint(xs-only){setFont('adineuePROCyr',bold,normal,49px,45px) }
-            &_gradient
-                gradienLinear('text',$dark.secondary -9.98%,$dark.primary 62.2%,262.17deg)
         &__text
             margin-top:10vh;
             setFont('adineuePROCyr',bold,normal,36px,55px)
@@ -105,8 +189,45 @@ export default {
         background:$dark.bg1
         &__header
             setFont('adineuePROCyr',bold,normal,44px,42px)
-            &_gradient
-                gradienLinear('text',$dark.secondary -9.98%,$dark.primary 62.2%,262.17deg)
         &__text
             setFont('LabGrotesque',normal,normal,19px,32px)
+
+    .section2
+        margin-top 100px
+    .separator
+        border: 1px solid #4C4A5F;
+        margin 50px 150px
+    .section3
+        &__header
+            margin-bottom 50px
+        &__btn
+            margin-top 90px
+            margin-bottom 141px
+            +breakpoint(xs-only){
+                margin-bottom 60px
+            }
+    .section4
+        &__header
+            font-style: normal;
+            font-weight: 700;
+            font-size: 142px;
+            line-height: 124px;
+            margin-bottom 120px
+            +breakpoint(xs-only){
+                font-weight: 700;
+                font-size: 49px;
+                line-height: 45px;
+                margin-bottom 60px
+            };
+        &__form
+            width 100%
+            position:relative
+            border-radius: 8px;
+            padding 50px
+            padding-top 70px
+            +breakpoint(xs-only){
+                padding 5px
+            };
+            
+
 </style>

@@ -36,7 +36,7 @@ export default {
         setFont('adineuePROCyr',bold,normal)
         +breakpoint(xs-only){font-size: 17px}
         font-size: 21px;
-        min-height 63px
+        min-height 56px
         svg
             margin-left:10px
     

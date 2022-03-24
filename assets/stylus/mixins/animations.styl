@@ -15,3 +15,9 @@ hoverColor($type,$baseColor,$color,$delay){
         }
     }
 }
+
+@keyframes flash {
+    0% {transform:scale(1.001);}
+    50% {transform:scale(1.1);background-position: 100px 0px;}
+    100% {transform:scale(1.001);background-position: 0px 0px;}
+}

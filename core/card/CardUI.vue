@@ -70,7 +70,9 @@ export default {
     &_small
       max-width 373px
     &__img
-      width:100%
+      width 100%
+      img
+        width 100%
     &__name
       font-weight: 700;
       font-size: 53px;
